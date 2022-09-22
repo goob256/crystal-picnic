@@ -1,0 +1,21 @@
+Copyright (c) 2010-2020 Nooskewl
+
+You are hereby granted a license to compile and play this game or derive your
+own free or commercial works from it, subject to the following conditions:
+
+1) You do not distribute any binary or source versions of these files unless
+   the end product is substantially different from the original
+
+2) You choose a title for your project that does not lead anyone to believe it
+   is related to the original
+
+3) This license, including the copyright line, is included and easily visible
+   to the user of any derivative works
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

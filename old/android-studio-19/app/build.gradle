@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.nooskewl.cp"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 94
+        versionName '1.14.3'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi-v7a', "x86"
+        }
+        externalNativeBuild {
+            ndkBuild {
+                arguments '-j8'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path "../ndk-build-project/jni/Android.mk"
+        }
+    }
+    buildToolsVersion '29.0.3'
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:multidex:1.0.3'
+}
