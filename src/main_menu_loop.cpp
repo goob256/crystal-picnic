@@ -1479,7 +1479,7 @@ bool Main_Menu_Items_Loop::init()
 	list->set_can_arrange(true);
 	list->setX(green_x+8+55+1);
 	list->setY(green_y+9);
-	list->setWidth(win_w-8-55-1-W_Vertical_Scrollbar::WIDTH);
+	list->setWidth(win_w-8-55-1-W_Vertical_Scrollbar::WIDTH-8);
 	list->setHeight(win_h - 18 - 1 - info_panel_h);
 	list->set_right_icon_filenames(right_icon_filenames);
 	list->set_item_images(&item_images);
