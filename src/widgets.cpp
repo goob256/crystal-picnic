@@ -380,10 +380,10 @@ bool W_Equipment_List::keyChar(int keycode, int unichar)
 	return ret;
 }
 
-void W_Equipment_List::joyButtonDownRepeat(int button)
+void W_Equipment_List::joyButtonDown(int button)
 {
 	bool dib = draw_info_box;
-	W_Scrolling_List::joyButtonDownRepeat(button);
+	W_Scrolling_List::joyButtonDown(button);
 	draw_info_box = (dib == true) ? false : draw_info_box;
 }
 
@@ -891,7 +891,7 @@ bool W_Scrolling_List::keyChar(int keycode, int unichar)
 	return false;
 }
 
-void W_Scrolling_List::joyButtonDownRepeat(int button)
+void W_Scrolling_List::joyButtonDown(int button)
 {
 	if (this != tgui::getFocussedWidget()) {
 		return;

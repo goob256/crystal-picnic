@@ -249,7 +249,7 @@ public:
 
 	virtual void use_button(int button);
 	virtual bool keyChar(int keycode, int unichar);
-	virtual void joyButtonDownRepeat(int button);
+	virtual void joyButtonDown(int button);
 	virtual bool joyAxisRepeat(int stick, int axis, float value);
 	int get_num_items();
 	void set_translate_item_names(bool translate);
@@ -344,7 +344,7 @@ class W_Equipment_List : public W_Scrolling_List {
 public:
 	void use_button(int button);
 	bool keyChar(int keycode, int unichar);
-	void joyButtonDownRepeat(int button);
+	void joyButtonDown(int button);
 	bool joyAxisRepeat(int stick, int axis, float value);
 	void update_description(int index, std::string desc);
 	void set_active_column(int c);
