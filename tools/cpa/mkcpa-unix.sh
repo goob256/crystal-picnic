@@ -6,7 +6,7 @@ if [ ! -d data ]; then
 fi
 
 if [ ! -e data/fonts/heavy.ttf -o ! -e data/fonts/light.ttf -o ! -e data/music/retro.sf2 ]; then
-  echo "Crystal Picnic requires two fonts and one MIDI soundfont which are not available in the git repo, and at least one of them seems missing."
+  echo "Crystal Picnic requires three fonts and one MIDI soundfont which are not available in the git repo, and at least one of them seems missing."
   echo "Check data/Notice.txt for details. Aborting, as the resulting data.cpa would be incomplete."
   exit 2
 fi
