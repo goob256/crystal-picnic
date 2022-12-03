@@ -1004,8 +1004,10 @@ bool Engine::init_allegro()
 	ALLEGRO_DEBUG("Addons initialized");
 
 #if defined ALLEGRO_UNIX && !defined ALLEGRO_RASPBERRYPI
-	int flags = al_get_new_bitmap_flags();
-	al_set_new_bitmap_flags(flags | ALLEGRO_MEMORY_BITMAP);
+	int icon_format = al_get_new_bitmap_format();
+	int icon_flags = al_get_new_bitmap_flags();
+	al_set_new_bitmap_format(ALLEGRO_PIXEL_FORMAT_ABGR_8888_LE);
+	al_set_new_bitmap_flags(ALLEGRO_MEMORY_BITMAP);
 	Wrap::Bitmap *icon_tmp;
 	// Workaround for IceWM which doesn't like 256x256 icons
 	if (getenv("DESKTOP_SESSION") && strcasestr(getenv("DESKTOP_SESSION"), "IceWM") != NULL) {
@@ -1016,7 +1018,8 @@ bool Engine::init_allegro()
 	}
 	al_x_set_initial_icon(icon_tmp->bitmap);
 	Wrap::destroy_bitmap(icon_tmp);
-	al_set_new_bitmap_flags(flags);
+	al_set_new_bitmap_format(icon_format);
+	al_set_new_bitmap_flags(icon_flags);
 #endif
 
 	if (cfg.vsync) {
