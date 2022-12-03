@@ -344,12 +344,14 @@ else()
 				set(PNG_LIBRARY png)
 				set(FREETYPE_LIBRARY freetype)
 				set(ZLIB_LIBRARY z)
+				set(BROTLI_LIBRARY brotlidec brotlicommon)
 				set(OTHER_LIBRARIES pthread)
 			else()
 				set(LUA_LIBRARY "/usr/lib/x86_64-linux-gnu/liblua5.2.a")
 				set(PNG_LIBRARY "/usr/lib/x86_64-linux-gnu/libpng16.a")
 				set(FREETYPE_LIBRARY "/usr/lib/x86_64-linux-gnu/libfreetype.a")
 				set(ZLIB_LIBRARY "/usr/lib/x86_64-linux-gnu/libz.a")
+				set(BROTLI_LIBRARY "/usr/lib/x86_64-linux-gnu/libbrotlidec.a" "/usr/lib/x86_64-linux-gnu/libbrotlicommon.a")
 				set(OTHER_LIBRARIES pthread dl)
 			endif()
 			set(BASS_LIBRARY "/home/trent/code/crystal-picnic/build/libbass.so")
@@ -372,6 +374,7 @@ else()
 			${BASS_LIBRARY}
 			${BASSMIDI_LIBRARY}
 			${POLY2TRI_LIBRARY}
+			${BROTLI_LIBRARY}
 			${OTHER_LIBRARIES}
 			${STEAMWORKS_LIBRARY}
 			pthread
